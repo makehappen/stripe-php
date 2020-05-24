@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Exception\OAuth;
+namespace StripeV2\Exception\OAuth;
 
 /**
  * InvalidGrantException is thrown when a specified code doesn't exist, is

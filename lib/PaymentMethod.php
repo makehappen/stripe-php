@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * PaymentMethod objects represent your customer's payment instruments. They can be
@@ -16,17 +16,17 @@ namespace Stripe;
  *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
- * @property \Stripe\StripeObject $au_becs_debit
- * @property \Stripe\StripeObject $billing_details
- * @property \Stripe\StripeObject $card
- * @property \Stripe\StripeObject $card_present
+ * @property \StripeV2\StripeObject $au_becs_debit
+ * @property \StripeV2\StripeObject $billing_details
+ * @property \StripeV2\StripeObject $card
+ * @property \StripeV2\StripeObject $card_present
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
- * @property null|string|\Stripe\Customer $customer The ID of the Customer to which this PaymentMethod is saved. This will not be set when the PaymentMethod has not been saved to a Customer.
- * @property \Stripe\StripeObject $fpx
- * @property \Stripe\StripeObject $ideal
+ * @property null|string|\StripeV2\Customer $customer The ID of the Customer to which this PaymentMethod is saved. This will not be set when the PaymentMethod has not been saved to a Customer.
+ * @property \StripeV2\StripeObject $fpx
+ * @property \StripeV2\StripeObject $ideal
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
- * @property \Stripe\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
- * @property \Stripe\StripeObject $sepa_debit
+ * @property \StripeV2\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+ * @property \StripeV2\StripeObject $sepa_debit
  * @property string $type The type of the PaymentMethod. An additional hash is included on the PaymentMethod with a name matching this value. It contains additional information specific to the PaymentMethod type.
  */
 class PaymentMethod extends ApiResource
@@ -42,7 +42,7 @@ class PaymentMethod extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
      * @return PaymentMethod the attached payment method
      */
@@ -59,7 +59,7 @@ class PaymentMethod extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
      * @return PaymentMethod the detached payment method
      */

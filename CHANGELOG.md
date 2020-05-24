@@ -17,7 +17,7 @@
 * [#883](https://github.com/stripe/stripe-php/pull/883) Add PHPDoc class descriptions
 
 ## 7.25.0 - 2020-02-14
-* [#879](https://github.com/stripe/stripe-php/pull/879) Make `\Stripe\Collection` implement `\Countable`
+* [#879](https://github.com/stripe/stripe-php/pull/879) Make `\StripeV2\Collection` implement `\Countable`
 * [#875](https://github.com/stripe/stripe-php/pull/875) Last set of PHP-CS-Fixer updates
 * [#874](https://github.com/stripe/stripe-php/pull/874) Enable php_unit_internal_class rule
 * [#873](https://github.com/stripe/stripe-php/pull/873) Add support for phpDocumentor in Makefile
@@ -180,7 +180,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 -   Update constant definitions for PHP >= 5.6 ([#556](https://github.com/stripe/stripe-php/pull/556))
 -   ⚠️ Remove `FileUpload` alias ([#557](https://github.com/stripe/stripe-php/pull/557))
 -   Remove `curl_reset` check ([#570](https://github.com/stripe/stripe-php/pull/570))
--   Use `\Stripe\<class>::class` constant instead of strings ([#643](https://github.com/stripe/stripe-php/pull/643))
+-   Use `\StripeV2\<class>::class` constant instead of strings ([#643](https://github.com/stripe/stripe-php/pull/643))
 -   Use `array_column` to flatten params ([#686](https://github.com/stripe/stripe-php/pull/686))
 -   ⚠️ Remove deprecated methods ([#692](https://github.com/stripe/stripe-php/pull/692))
 -   ⚠️ Remove `IssuerFraudRecord` ([#696](https://github.com/stripe/stripe-php/pull/696))
@@ -440,15 +440,15 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.19.5 - 2018-10-17
 
--   [#539](https://github.com/stripe/stripe-php/pull/539) Fix methods on `\Stripe\PaymentIntent` to properly pass arguments to the API.
+-   [#539](https://github.com/stripe/stripe-php/pull/539) Fix methods on `\StripeV2\PaymentIntent` to properly pass arguments to the API.
 
 ## 6.19.4 - 2018-10-11
 
--   [#534](https://github.com/stripe/stripe-php/pull/534) Fix PSR-4 autoloading for `\Stripe\FileUpload` class alias
+-   [#534](https://github.com/stripe/stripe-php/pull/534) Fix PSR-4 autoloading for `\StripeV2\FileUpload` class alias
 
 ## 6.19.3 - 2018-10-09
 
--   [#530](https://github.com/stripe/stripe-php/pull/530) Add constants for `flow` (`FLOW_*`), `status` (`STATUS_*`) and `usage` (`USAGE_*`) on `\Stripe\Source`
+-   [#530](https://github.com/stripe/stripe-php/pull/530) Add constants for `flow` (`FLOW_*`), `status` (`STATUS_*`) and `usage` (`USAGE_*`) on `\StripeV2\Source`
 
 ## 6.19.2 - 2018-10-08
 
@@ -464,7 +464,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.18.0 - 2018-09-24
 
--   [#520](https://github.com/stripe/stripe-php/pull/520) Rename `\Stripe\FileUpload` to `\Stripe\File`
+-   [#520](https://github.com/stripe/stripe-php/pull/520) Rename `\StripeV2\FileUpload` to `\StripeV2\File`
 
 ## 6.17.2 - 2018-09-18
 
@@ -492,11 +492,11 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.13.0 - 2018-07-31
 
--   [#502](https://github.com/stripe/stripe-php/pull/502) Add `isDeleted()` method to `\Stripe\StripeObject`
+-   [#502](https://github.com/stripe/stripe-php/pull/502) Add `isDeleted()` method to `\StripeV2\StripeObject`
 
 ## 6.12.0 - 2018-07-28
 
--   [#501](https://github.com/stripe/stripe-php/pull/501) Add support for scheduled query runs (`\Stripe\Sigma\ScheduledQueryRun`) for Sigma
+-   [#501](https://github.com/stripe/stripe-php/pull/501) Add support for scheduled query runs (`\StripeV2\Sigma\ScheduledQueryRun`) for Sigma
 
 ## 6.11.0 - 2018-07-26
 
@@ -504,7 +504,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.10.4 - 2018-07-19
 
--   [#498](https://github.com/stripe/stripe-php/pull/498) Internal improvements to the `\Stripe\ApiResource.classUrl()` method
+-   [#498](https://github.com/stripe/stripe-php/pull/498) Internal improvements to the `\StripeV2\ApiResource.classUrl()` method
 
 ## 6.10.3 - 2018-07-16
 
@@ -516,7 +516,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.10.1 - 2018-07-10
 
--   [#493](https://github.com/stripe/stripe-php/pull/493) Add PHPDoc for `auto_advance` on `\Stripe\Invoice`
+-   [#493](https://github.com/stripe/stripe-php/pull/493) Add PHPDoc for `auto_advance` on `\StripeV2\Invoice`
 
 ## 6.10.0 - 2018-06-28
 
@@ -536,7 +536,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.8.0 - 2018-06-13
 
--   [#481](https://github.com/stripe/stripe-php/pull/481) Add new `\Stripe\Discount` and `\Stripe\OrderItem` classes, add more PHPDoc describing object attributes
+-   [#481](https://github.com/stripe/stripe-php/pull/481) Add new `\StripeV2\Discount` and `\StripeV2\OrderItem` classes, add more PHPDoc describing object attributes
 
 ## 6.7.4 - 2018-05-29
 
@@ -544,11 +544,11 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.7.3 - 2018-05-28
 
--   [#479](https://github.com/stripe/stripe-php/pull/479) Fix unnecessary traits on `\Stripe\InvoiceLineItem`
+-   [#479](https://github.com/stripe/stripe-php/pull/479) Fix unnecessary traits on `\StripeV2\InvoiceLineItem`
 
 ## 6.7.2 - 2018-05-28
 
--   [#471](https://github.com/stripe/stripe-php/pull/471) Add `OBJECT_NAME` constant to all API resource classes, add `\Stripe\InvoiceLineItem` class
+-   [#471](https://github.com/stripe/stripe-php/pull/471) Add `OBJECT_NAME` constant to all API resource classes, add `\StripeV2\InvoiceLineItem` class
 
 ## 6.7.1 - 2018-05-13
 
@@ -568,7 +568,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.4.2 - 2018-03-17
 
--   [#458](https://github.com/stripe/stripe-php/pull/458) Add PHPDoc for `account` on `\Stripe\Event`
+-   [#458](https://github.com/stripe/stripe-php/pull/458) Add PHPDoc for `account` on `\StripeV2\Event`
 
 ## 6.4.1 - 2018-03-02
 
@@ -577,15 +577,15 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 
 ## 6.4.0 - 2018-02-28
 
--   [#453](https://github.com/stripe/stripe-php/pull/453) Add constants for `reason` (`REASON_*`) and `status` (`STATUS_*`) on `\Stripe\Dispute`
+-   [#453](https://github.com/stripe/stripe-php/pull/453) Add constants for `reason` (`REASON_*`) and `status` (`STATUS_*`) on `\StripeV2\Dispute`
 
 ## 6.3.2 - 2018-02-27
 
--   [#452](https://github.com/stripe/stripe-php/pull/452) Add PHPDoc for `amount_paid` and `amount_remaining` on `\Stripe\Invoice`
+-   [#452](https://github.com/stripe/stripe-php/pull/452) Add PHPDoc for `amount_paid` and `amount_remaining` on `\StripeV2\Invoice`
 
 ## 6.3.1 - 2018-02-26
 
--   [#443](https://github.com/stripe/stripe-php/pull/443) Add event types as constants to `\Stripe\Event` class
+-   [#443](https://github.com/stripe/stripe-php/pull/443) Add event types as constants to `\StripeV2\Event` class
 
 ## 6.3.0 - 2018-02-23
 
@@ -594,7 +594,7 @@ Pull requests included in this release (cf. [#552](https://github.com/stripe/str
 ## 6.2.0 - 2018-02-21
 
 -   [#440](https://github.com/stripe/stripe-php/pull/440) Add support for topups
--   [#442](https://github.com/stripe/stripe-php/pull/442) Fix PHPDoc for `\Stripe\Error\SignatureVerification`
+-   [#442](https://github.com/stripe/stripe-php/pull/442) Fix PHPDoc for `\StripeV2\Error\SignatureVerification`
 
 ## 6.1.0 - 2018-02-12
 
@@ -607,11 +607,11 @@ Major version release. List of backwards incompatible changes to watch out for:
 
 -   The minimum PHP version is now 5.4.0. If you're using PHP 5.3 or older, consider upgrading to a more recent version.
 
-*   `\Stripe\AttachedObject` no longer exists. Attributes that used to be instances of `\Stripe\AttachedObject` (such as `metadata`) are now instances of `\Stripe\StripeObject`.
+*   `\StripeV2\AttachedObject` no longer exists. Attributes that used to be instances of `\StripeV2\AttachedObject` (such as `metadata`) are now instances of `\StripeV2\StripeObject`.
 
--   Attributes that used to be PHP arrays (such as `legal_entity->additional_owners` on `\Stripe\Account` instances) are now instances of `\Stripe\StripeObject`, except when they are empty. `\Stripe\StripeObject` has array semantics so this should not be an issue unless you are actively checking types.
+-   Attributes that used to be PHP arrays (such as `legal_entity->additional_owners` on `\StripeV2\Account` instances) are now instances of `\StripeV2\StripeObject`, except when they are empty. `\StripeV2\StripeObject` has array semantics so this should not be an issue unless you are actively checking types.
 
-*   `\Stripe\Collection` now derives from `\Stripe\StripeObject` rather than from `\Stripe\ApiResource`.
+*   `\StripeV2\Collection` now derives from `\StripeV2\StripeObject` rather than from `\StripeV2\ApiResource`.
 
 Pull requests included in this release:
 
@@ -738,7 +738,7 @@ Pull requests included in this release:
 
 ## 4.8.0 - 2017-04-20
 
--   Add `\Stripe\Stripe::setLogger()` to support an external PSR-3 compatible logger
+-   Add `\StripeV2\Stripe::setLogger()` to support an external PSR-3 compatible logger
 
 ## 4.7.0 - 2017-04-10
 
@@ -929,7 +929,7 @@ Pull requests included in this release:
 
 ## 3.0.0 - 2015-07-28
 
--   Rename `\Stripe\Object` to `\Stripe\StripeObject` (PHP 7 compatibility)
+-   Rename `\StripeV2\Object` to `\StripeV2\StripeObject` (PHP 7 compatibility)
 -   Rename `getCode` and `getParam` in exceptions to `getStripeCode` and `getStripeParam`
 -   Add support for calling `json_encode` on Stripe objects in PHP 5.4+
 -   Start supporting/testing PHP 7
@@ -976,7 +976,7 @@ Pull requests included in this release:
 ## 2.0.0 - 2015-02-14
 
 -   Bumped minimum version to 5.3.3
--   Switched to Stripe namespace instead of Stripe\_ class name prefiexes (thanks @chadicus!)
+-   Switched to Stripe namespace instead of StripeV2\_ class name prefiexes (thanks @chadicus!)
 -   Switched tests to PHPUnit (thanks @chadicus!)
 -   Switched style guide to PSR2 (thanks @chadicus!)
 -   Added \$opts hash to the end of most methods: this permits passing 'idempotency_key', 'stripe_account', or 'stripe_version'. The last 2 will persist across multiple object loads.

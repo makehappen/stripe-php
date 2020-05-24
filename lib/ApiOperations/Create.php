@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\ApiOperations;
+namespace StripeV2\ApiOperations;
 
 /**
  * Trait for creatable resources. Adds a `create()` static method to the class.
@@ -13,7 +13,7 @@ trait Create
      * @param null|array $params
      * @param null|array|string $options
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
      * @return static the created resource
      */
@@ -23,7 +23,7 @@ trait Create
         $url = static::classUrl();
 
         list($response, $opts) = static::_staticRequest('post', $url, $params, $options);
-        $obj = \Stripe\Util\Util::convertToStripeObject($response->json, $opts);
+        $obj = \StripeV2\Util\Util::convertToStripeObject($response->json, $opts);
         $obj->setLastResponse($response);
 
         return $obj;

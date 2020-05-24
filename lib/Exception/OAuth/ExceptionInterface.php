@@ -1,10 +1,10 @@
 <?php
 
-namespace Stripe\Exception\OAuth;
+namespace StripeV2\Exception\OAuth;
 
 /**
  * The base interface for all Stripe OAuth exceptions.
  */
-interface ExceptionInterface extends \Stripe\Exception\ExceptionInterface
+interface ExceptionInterface extends \StripeV2\Exception\ExceptionInterface
 {
 }

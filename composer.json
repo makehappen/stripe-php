@@ -1,5 +1,5 @@
 {
-  "name": "stripe/stripe-php",
+  "name": "stripe/stripe-php-v2",
   "description": "Stripe PHP Library",
   "keywords": [
     "stripe",
@@ -29,12 +29,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Stripe\\": "lib/"
+      "StripeV2\\": "lib/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Stripe\\": [
+      "StripeV2\\": [
         "tests/",
         "tests/Stripe/"
       ]

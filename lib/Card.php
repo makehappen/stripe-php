@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * You can store multiple cards on a customer in order to charge the customer
@@ -12,7 +12,7 @@ namespace Stripe;
  *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
- * @property null|string|\Stripe\Account $account The account this card belongs to. This attribute will not be in the card object if the card belongs to a customer or recipient instead.
+ * @property null|string|\StripeV2\Account $account The account this card belongs to. This attribute will not be in the card object if the card belongs to a customer or recipient instead.
  * @property null|string $address_city City/District/Suburb/Town/Village.
  * @property null|string $address_country Billing address country, if provided when creating card.
  * @property null|string $address_line1 Address line 1 (Street address/PO Box/Company name).
@@ -25,7 +25,7 @@ namespace Stripe;
  * @property string $brand Card brand. Can be <code>American Express</code>, <code>Diners Club</code>, <code>Discover</code>, <code>JCB</code>, <code>MasterCard</code>, <code>UnionPay</code>, <code>Visa</code>, or <code>Unknown</code>.
  * @property null|string $country Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you've collected.
  * @property null|string $currency
- * @property null|string|\Stripe\Customer $customer The customer that this card belongs to. This attribute will not be in the card object if the card belongs to an account or recipient instead.
+ * @property null|string|\StripeV2\Customer $customer The customer that this card belongs to. This attribute will not be in the card object if the card belongs to an account or recipient instead.
  * @property null|string $cvc_check If a CVC was provided, results of the check: <code>pass</code>, <code>fail</code>, <code>unavailable</code>, or <code>unchecked</code>.
  * @property null|bool $default_for_currency Whether this card is the default external account for its currency.
  * @property null|string $dynamic_last4 (For tokenized numbers only.) The last four digits of the device account number.
@@ -34,9 +34,9 @@ namespace Stripe;
  * @property null|string $fingerprint Uniquely identifies this particular card number. You can use this attribute to check whether two customers who've signed up with you are using the same card number, for example.
  * @property string $funding Card funding type. Can be <code>credit</code>, <code>debit</code>, <code>prepaid</code>, or <code>unknown</code>.
  * @property string $last4 The last four digits of the card.
- * @property \Stripe\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+ * @property \StripeV2\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
  * @property null|string $name Cardholder name.
- * @property null|string|\Stripe\Recipient $recipient The recipient that this card belongs to. This attribute will not be in the card object if the card belongs to a customer or account instead.
+ * @property null|string|\StripeV2\Recipient $recipient The recipient that this card belongs to. This attribute will not be in the card object if the card belongs to a customer or account instead.
  * @property null|string $tokenization_method If the card number is tokenized, this is the method that was used. Can be <code>amex_express_checkout</code>, <code>android_pay</code> (includes Google Pay), <code>apple_pay</code>, <code>masterpass</code>, <code>visa_checkout</code>, or null.
  */
 class Card extends ApiResource
@@ -108,7 +108,7 @@ class Card extends ApiResource
      * @param array|string $_id
      * @param null|array|string $_opts
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function retrieve($_id, $_opts = null)
     {
@@ -125,7 +125,7 @@ class Card extends ApiResource
      * @param null|array $_params
      * @param null|array|string $_options
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function update($_id, $_params = null, $_options = null)
     {

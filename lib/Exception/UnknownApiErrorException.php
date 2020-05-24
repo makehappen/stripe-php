@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Exception;
+namespace StripeV2\Exception;
 
 /**
  * UnknownApiErrorException is thrown when the client library receives an

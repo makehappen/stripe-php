@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Exception\OAuth;
+namespace StripeV2\Exception\OAuth;
 
 /**
  * UnsupportedResponseTypeException is thrown when an unsupported response type

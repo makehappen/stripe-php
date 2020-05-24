@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Exception\OAuth;
+namespace StripeV2\Exception\OAuth;
 
 /**
  * InvalidScopeException is thrown when an invalid scope parameter is provided.

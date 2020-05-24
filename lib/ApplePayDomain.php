@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * @property string $id Unique identifier for the object.

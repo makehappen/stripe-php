@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class Capability.
@@ -10,7 +10,7 @@ namespace Stripe;
  * @property string $account
  * @property bool $requested
  * @property int $requested_at
- * @property \Stripe\StripeObject $requirements
+ * @property \StripeV2\StripeObject $requirements
  * @property string $status
  */
 class Capability extends ApiResource
@@ -57,7 +57,7 @@ class Capability extends ApiResource
      * @param array|string $_id
      * @param null|array|string $_opts
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function retrieve($_id, $_opts = null)
     {
@@ -73,7 +73,7 @@ class Capability extends ApiResource
      * @param null|array $_params
      * @param null|array|string $_options
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function update($_id, $_params = null, $_options = null)
     {

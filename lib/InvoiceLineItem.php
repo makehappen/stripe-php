@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class InvoiceLineItem.
@@ -13,9 +13,9 @@ namespace Stripe;
  * @property bool $discountable
  * @property string $invoice_item
  * @property bool $livemode
- * @property \Stripe\StripeObject $metadata
- * @property \Stripe\StripeObject $period
- * @property \Stripe\Plan $plan
+ * @property \StripeV2\StripeObject $metadata
+ * @property \StripeV2\StripeObject $period
+ * @property \StripeV2\Plan $plan
  * @property bool $proration
  * @property int $quantity
  * @property string $subscription

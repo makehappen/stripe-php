@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class UsageRecord.
@@ -9,7 +9,7 @@ namespace Stripe;
  * @property string $object
  * @property string $invoice
  * @property bool $livemode
- * @property \Stripe\StripeObject $period
+ * @property \StripeV2\StripeObject $period
  * @property string $subscription_item
  * @property int $total_usage
  */

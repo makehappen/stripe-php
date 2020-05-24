@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class Collection.
@@ -8,7 +8,7 @@ namespace Stripe;
  * @property string $object
  * @property string $url
  * @property bool $has_more
- * @property \Stripe\StripeObject[] $data
+ * @property \StripeV2\StripeObject[] $data
  */
 class Collection extends StripeObject implements \Countable, \IteratorAggregate
 {
@@ -67,9 +67,9 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
 
         list($response, $opts) = $this->_request('get', $url, $params, $opts);
         $obj = Util\Util::convertToStripeObject($response, $opts);
-        if (!($obj instanceof \Stripe\Collection)) {
-            throw new \Stripe\Exception\UnexpectedValueException(
-                'Expected type ' . \Stripe\Collection::class . ', got "' . \get_class($obj) . '" instead.'
+        if (!($obj instanceof \StripeV2\Collection)) {
+            throw new \StripeV2\Exception\UnexpectedValueException(
+                'Expected type ' . \StripeV2\Collection::class . ', got "' . \get_class($obj) . '" instead.'
             );
         }
         $obj->setFilters($params);

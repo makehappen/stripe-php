@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Radar;
+namespace StripeV2\Radar;
 
 /**
  * Value list items allow you to add specific values to a given Radar value list,
@@ -18,12 +18,12 @@ namespace Stripe\Radar;
  * @property string $value The value of the item.
  * @property string $value_list The identifier of the value list this item belongs to.
  */
-class ValueListItem extends \Stripe\ApiResource
+class ValueListItem extends \StripeV2\ApiResource
 {
     const OBJECT_NAME = 'radar.value_list_item';
 
-    use \Stripe\ApiOperations\All;
-    use \Stripe\ApiOperations\Create;
-    use \Stripe\ApiOperations\Delete;
-    use \Stripe\ApiOperations\Retrieve;
+    use \StripeV2\ApiOperations\All;
+    use \StripeV2\ApiOperations\Create;
+    use \StripeV2\ApiOperations\Delete;
+    use \StripeV2\ApiOperations\Retrieve;
 }

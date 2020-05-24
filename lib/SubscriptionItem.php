@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Subscription items allow you to create customer subscriptions with more than one
@@ -8,13 +8,13 @@ namespace Stripe;
  *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
- * @property null|\Stripe\StripeObject $billing_thresholds Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period
+ * @property null|\StripeV2\StripeObject $billing_thresholds Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
- * @property \Stripe\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
- * @property \Stripe\Plan $plan <p>Plans define the base price, currency, and billing cycle for subscriptions. For example, you might have a &lt;currency&gt;5&lt;/currency&gt;/month plan that provides limited access to your products, and a &lt;currency&gt;15&lt;/currency&gt;/month plan that allows full access.</p><p>Related guide: <a href="https://stripe.com/docs/billing/subscriptions/products-and-plans">Managing Products and Plans</a>.</p>
+ * @property \StripeV2\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+ * @property \StripeV2\Plan $plan <p>Plans define the base price, currency, and billing cycle for subscriptions. For example, you might have a &lt;currency&gt;5&lt;/currency&gt;/month plan that provides limited access to your products, and a &lt;currency&gt;15&lt;/currency&gt;/month plan that allows full access.</p><p>Related guide: <a href="https://stripe.com/docs/billing/subscriptions/products-and-plans">Managing Products and Plans</a>.</p>
  * @property int $quantity The <a href="https://stripe.com/docs/subscriptions/quantities">quantity</a> of the plan to which the customer should be subscribed.
  * @property string $subscription The <code>subscription</code> this <code>subscription_item</code> belongs to.
- * @property null|\Stripe\TaxRate[] $tax_rates The tax rates which apply to this <code>subscription_item</code>. When set, the <code>default_tax_rates</code> on the subscription do not apply to this <code>subscription_item</code>.
+ * @property null|\StripeV2\TaxRate[] $tax_rates The tax rates which apply to this <code>subscription_item</code>. When set, the <code>default_tax_rates</code> on the subscription do not apply to this <code>subscription_item</code>.
  */
 class SubscriptionItem extends ApiResource
 {
@@ -34,9 +34,9 @@ class SubscriptionItem extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\UsageRecord
+     * @return \StripeV2\UsageRecord
      */
     public static function createUsageRecord($id, $params = null, $opts = null)
     {
@@ -49,15 +49,15 @@ class SubscriptionItem extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection the list of usage record summaries
+     * @return \StripeV2\Collection the list of usage record summaries
      */
     public function usageRecordSummaries($params = null, $opts = null)
     {
         $url = $this->instanceUrl() . '/usage_record_summaries';
         list($response, $opts) = $this->_request('get', $url, $params, $opts);
-        $obj = \Stripe\Util\Util::convertToStripeObject($response, $opts);
+        $obj = \StripeV2\Util\Util::convertToStripeObject($response, $opts);
         $obj->setLastResponse($response);
 
         return $obj;
@@ -70,9 +70,9 @@ class SubscriptionItem extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection the list of usage record summaries
+     * @return \StripeV2\Collection the list of usage record summaries
      */
     public static function allUsageRecordSummaries($id, $params = null, $opts = null)
     {

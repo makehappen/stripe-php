@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class ApplicationFeeRefund.
@@ -12,7 +12,7 @@ namespace Stripe;
  * @property int $created
  * @property string $currency
  * @property string $fee
- * @property \Stripe\StripeObject $metadata
+ * @property \StripeV2\StripeObject $metadata
  */
 class ApplicationFeeRefund extends ApiResource
 {

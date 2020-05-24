@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * @property string $id Unique identifier for the object.
@@ -25,10 +25,10 @@ class EphemeralKey extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\InvalidArgumentException if stripe_version is missing
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\InvalidArgumentException if stripe_version is missing
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\EphemeralKey the created key
+     * @return \StripeV2\EphemeralKey the created key
      */
     public static function create($params = null, $opts = null)
     {

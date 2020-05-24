@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Store representations of products you sell in <code>Product</code> objects, used
@@ -25,9 +25,9 @@ namespace Stripe;
  * @property null|string $description The product's description, meant to be displayable to the customer. Use this field to optionally store a long form explanation of the product being sold for your own rendering purposes.
  * @property string[] $images A list of up to 8 URLs of images for this product, meant to be displayable to the customer.
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
- * @property \Stripe\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+ * @property \StripeV2\StripeObject $metadata Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
  * @property string $name The product's name, meant to be displayable to the customer. Whenever this product is sold via a subscription, name will show up on associated invoice line item descriptions.
- * @property null|\Stripe\StripeObject $package_dimensions The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own <code>package_dimensions</code>. Only applicable to products of <code>type=good</code>.
+ * @property null|\StripeV2\StripeObject $package_dimensions The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own <code>package_dimensions</code>. Only applicable to products of <code>type=good</code>.
  * @property null|bool $shippable Whether this product is a shipped good. Only applicable to products of <code>type=good</code>.
  * @property null|string $statement_descriptor Extra information about a product which will appear on your customer's credit card statement. In the case that multiple products are billed at once, the first statement descriptor will be used.
  * @property string $type The type of the product. The product is either of type <code>good</code>, which is eligible for use with Orders and SKUs, or <code>service</code>, which is eligible for use with Subscriptions and Plans.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class TaxId.
@@ -13,7 +13,7 @@ namespace Stripe;
  * @property bool $livemode
  * @property string $type
  * @property string $value
- * @property \Stripe\StripeObject $verification
+ * @property \StripeV2\StripeObject $verification
  */
 class TaxId extends ApiResource
 {
@@ -86,7 +86,7 @@ class TaxId extends ApiResource
      * @param array|string $_id
      * @param null|array|string $_opts
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function retrieve($_id, $_opts = null)
     {

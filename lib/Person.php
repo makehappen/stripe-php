@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class Person.
@@ -8,12 +8,12 @@ namespace Stripe;
  * @property string $id
  * @property string $object
  * @property string $account
- * @property \Stripe\StripeObject $address
- * @property null|\Stripe\StripeObject $address_kana
- * @property null|\Stripe\StripeObject $address_kanji
+ * @property \StripeV2\StripeObject $address
+ * @property null|\StripeV2\StripeObject $address_kana
+ * @property null|\StripeV2\StripeObject $address_kanji
  * @property int $created
  * @property bool $deleted
- * @property \Stripe\StripeObject $dob
+ * @property \StripeV2\StripeObject $dob
  * @property null|string $email
  * @property null|string $first_name
  * @property null|string $first_name_kana
@@ -24,12 +24,12 @@ namespace Stripe;
  * @property null|string $last_name_kana
  * @property null|string $last_name_kanji
  * @property null|string $maiden_name
- * @property \Stripe\StripeObject $metadata
+ * @property \StripeV2\StripeObject $metadata
  * @property null|string $phone
- * @property \Stripe\StripeObject $relationship
- * @property null|\Stripe\StripeObject $requirements
+ * @property \StripeV2\StripeObject $relationship
+ * @property null|\StripeV2\StripeObject $requirements
  * @property bool $ssn_last_4_provided
- * @property \Stripe\StripeObject $verification
+ * @property \StripeV2\StripeObject $verification
  */
 class Person extends ApiResource
 {
@@ -83,7 +83,7 @@ class Person extends ApiResource
      * @param array|string $_id
      * @param null|array|string $_opts
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function retrieve($_id, $_opts = null)
     {
@@ -99,7 +99,7 @@ class Person extends ApiResource
      * @param null|array $_params
      * @param null|array|string $_options
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function update($_id, $_params = null, $_options = null)
     {

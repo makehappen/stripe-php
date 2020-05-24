@@ -1,13 +1,13 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class SourceTransaction.
  *
  * @property string $id
  * @property string $object
- * @property \Stripe\StripeObject $ach_credit_transfer
+ * @property \StripeV2\StripeObject $ach_credit_transfer
  * @property int $amount
  * @property int $created
  * @property string $customer_data

@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe\Util;
+namespace StripeV2\Util;
 
 /**
  * Describes a logger instance.

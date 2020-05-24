@@ -1,10 +1,10 @@
 <?php
 
-namespace Stripe\HttpClient;
+namespace StripeV2\HttpClient;
 
-use Stripe\Exception;
-use Stripe\Stripe;
-use Stripe\Util;
+use StripeV2\Exception;
+use StripeV2\Stripe;
+use StripeV2\Util;
 
 // @codingStandardsIgnoreStart
 // PSR2 requires all constants be upper case. Sadly, the CURL_SSLVERSION
@@ -39,7 +39,7 @@ class CurlClient implements ClientInterface
 
     protected $defaultOptions;
 
-    /** @var \Stripe\Util\RandomGenerator */
+    /** @var \StripeV2\Util\RandomGenerator */
     protected $randomGenerator;
 
     protected $userAgentInfo;
@@ -64,7 +64,7 @@ class CurlClient implements ClientInterface
      * throw an exception if $defaultOptions returns a non-array value.
      *
      * @param null|array|callable $defaultOptions
-     * @param null|\Stripe\Util\RandomGenerator $randomGenerator
+     * @param null|\StripeV2\Util\RandomGenerator $randomGenerator
      */
     public function __construct($defaultOptions = null, $randomGenerator = null)
     {
@@ -145,7 +145,7 @@ class CurlClient implements ClientInterface
      * <ol>
      *   <li>string $rbody The response body</li>
      *   <li>integer $rcode The response status code</li>
-     *   <li>\Stripe\Util\CaseInsensitiveArray $rheaders The response headers</li>
+     *   <li>\StripeV2\Util\CaseInsensitiveArray $rheaders The response headers</li>
      *   <li>integer $errno The curl error number</li>
      *   <li>string|null $message The curl error message</li>
      *   <li>boolean $shouldRetry Whether the request will be retried</li>
@@ -393,7 +393,7 @@ class CurlClient implements ClientInterface
      *
      * @param int $errno
      * @param int $rcode
-     * @param array|\Stripe\Util\CaseInsensitiveArray $rheaders
+     * @param array|\StripeV2\Util\CaseInsensitiveArray $rheaders
      * @param int $numRetries
      *
      * @return bool
@@ -448,7 +448,7 @@ class CurlClient implements ClientInterface
      * Provides the number of seconds to wait before retrying a request.
      *
      * @param int $numRetries
-     * @param array|\Stripe\Util\CaseInsensitiveArray $rheaders
+     * @param array|\StripeV2\Util\CaseInsensitiveArray $rheaders
      *
      * @return int
      */

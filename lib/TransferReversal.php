@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class TransferReversal.
@@ -12,7 +12,7 @@ namespace Stripe;
  * @property int $created
  * @property string $currency
  * @property string $destination_payment_refund
- * @property \Stripe\StripeObject $metadata
+ * @property \StripeV2\StripeObject $metadata
  * @property string $source_refund
  * @property string $transfer
  */
@@ -51,7 +51,7 @@ class TransferReversal extends ApiResource
     /**
      * @param null|array|string $opts
      *
-     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     * @throws \StripeV2\Exception\ApiErrorException if the request fails
      *
      * @return TransferReversal the saved reversal
      */

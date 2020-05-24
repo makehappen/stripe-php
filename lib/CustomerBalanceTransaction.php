@@ -1,6 +1,6 @@
 <?php
 
-namespace Stripe;
+namespace StripeV2;
 
 /**
  * Class CustomerBalanceTransaction.
@@ -16,7 +16,7 @@ namespace Stripe;
  * @property int $ending_balance
  * @property string $invoice
  * @property bool $livemode
- * @property \Stripe\StripeObject $metadata
+ * @property \StripeV2\StripeObject $metadata
  * @property string $type
  */
 class CustomerBalanceTransaction extends ApiResource
@@ -63,7 +63,7 @@ class CustomerBalanceTransaction extends ApiResource
      * @param array|string $_id
      * @param null|array|string $_opts
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function retrieve($_id, $_opts = null)
     {
@@ -80,7 +80,7 @@ class CustomerBalanceTransaction extends ApiResource
      * @param null|array $_params
      * @param null|array|string $_options
      *
-     * @throws \Stripe\Exception\BadMethodCallException
+     * @throws \StripeV2\Exception\BadMethodCallException
      */
     public static function update($_id, $_params = null, $_options = null)
     {
