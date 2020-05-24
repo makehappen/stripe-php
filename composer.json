@@ -1,6 +1,6 @@
 {
-  "name": "stripe/stripe-php-v2",
-  "description": "Stripe PHP Library",
+  "name": "makehappen/stripe-php",
+  "description": "V2 Stripe PHP Library",
   "keywords": [
     "stripe",
     "payment processing",
